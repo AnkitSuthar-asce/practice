@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartTasks Portal - Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="registration-card">
+        <h2>SmartTasks Portal</h2>
+        <p class="subtitle">Create your account to get started</p>
+        
+        <form id="registration-form" novalidate>
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="full-name" placeholder="John Doe">
+                </div>
+                <span class="error-message" id="name-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">✉️</span>
+                    <input type="email" id="email" placeholder="name@example.com">
+                </div>
+                <span class="error-message" id="email-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="mobile">Mobile Number</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">📱</span>
+                    <input type="tel" id="mobile" placeholder="10-digit number">
+                </div>
+                <span class="error-message" id="mobile-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">🔒</span>
+                    <input type="password" id="password" placeholder="At least 8 characters">
+                    <button type="button" id="toggle-password" class="toggle-btn">👁️</button>
+                </div>
+                <div class="strength-container">
+                    <div id="strength-bar" class="strength-bar"></div>
+                    <span id="strength-text" class="strength-text"></span>
+                </div>
+                <span class="error-message" id="password-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">🔄</span>
+                    <input type="password" id="confirm-password" placeholder="Repeat password">
+                </div>
+                <span class="error-message" id="confirm-password-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Gender</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="male"> Male
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="other"> Other
+                    </label>
+                </div>
+                <span class="error-message" id="gender-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">📅</span>
+                    <input type="date" id="dob">
+                </div>
+                <span class="error-message" id="dob-error"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <div class="input-wrapper">
+                    <span class="input-icon">🏙️</span>
+                    <select id="city">
+                        <option value="">-- Select your city --</option>
+                        <option value="new-york">New York</option>
+                        <option value="london">London</option>
+                        <option value="tokyo">Tokyo</option>
+                        <option value="mumbai">Mumbai</option>
+                    </select>
+                </div>
+                <span class="error-message" id="city-error"></span>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" id="terms">
+                    I agree to the SmartTasks Portal Terms & Conditions.
+                </label>
+                <span class="error-message" id="terms-error"></span>
+            </div>
+
+            <button type="submit" id="register-btn" disabled>Register Account</button>
+        </form>
+
+        <div id="loader" class="loader hidden"></div>
+        <div id="success-banner" class="success-banner hidden">Registration Successful!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

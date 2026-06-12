@@ -1,0 +1,11 @@
+{
+  "students": [
+    {
+      "name": "Ankit Suthar",
+      "email": "ankitsuthar117@gmail.com",
+      "course": "Java FullStack",
+      "id": "IZfPPiTiMOM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
